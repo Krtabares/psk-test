@@ -19,8 +19,10 @@ class Empresa {
             $errors[] = "El campo dirección es obligatorio.";
         }
 
-         if(empty($d['telefono'])) {
+        if(empty($d['telefono'])) {
             $errors[] = "El campo teléfono es obligatorio.";
+        }else if(!preg_match('/^\d{7,15}$/', $d['telefono'])) {
+            $errors[] = "El campo teléfono debe contener entre 7 y 15 dígitos numéricos.";
         }
 
         return count($errors) > 0 ? $errors : false;
