@@ -1,0 +1,14 @@
+{
+  "name": "krtab/empresas",
+  "description": "Módulo de empresas para o sistema de gestão empresarial",
+  "require": {
+    "php": ">=8.0",
+    "dompdf/dompdf": "^2.0",
+    "vlucas/phpdotenv": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
